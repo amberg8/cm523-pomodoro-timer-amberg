@@ -1,0 +1,9 @@
+/* ===== YOUR CSS GOES HERE ===== */
+/* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+
+body {
+    background: magenta;
+}
+p {
+    font-size: 2em;
+}
