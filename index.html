@@ -16,23 +16,27 @@
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/14a1e66242.js" crossorigin="anonymous"></script>
   </head>
 <body>
   <main>
     <div class="controls">
-      <button class="info-btn">ICON
-        <!--Icon needed --><i class="Info-Icon"></i>
+      <button class="info-btn"><i i style="font-size:20px" class="fa fa-info" aria-hidden="true"></i><i class="Info-Icon"></i>
       </button>
       <div id="info-box">
-        <p>Recomended Study times.<br><br>
-          Study for 25 minutes.<br><br>
-          After one study session, take a short 5min break.<br><br>
+        <p>Recommended Study times.
+          Study for 25 minutes.
+
+          After one study session, take a short 5min break.
+
           After 4 study sessions, take a long break of 15min.
-          <br><br>Continue cycles until tasks are complete!
+          Continue cycles until tasks are complete!
         </p>
       </div>
-      <button class="settings-btn">ICON
-        <!--Icon needed --><i class="Settings-icon"></i>
+      <button class="settings-btn">
+        <i style="font-size:20px" class="fa">&#xf085;</i><i class="Settings-icon"></i>
       </button>
       <div id="settings-box">
         <div class="settings-con-1">
@@ -43,15 +47,15 @@
           <div class="input-con">
             <div class="pomodoro-mode">
               <p class="settings-label">Pomodoro</p>
-              <input type="number" id="pomodoro" name="pomodoro" min="0" max="60" value="0.1">
+              <input type="number" id="pomodoro" name="pomodoro" min="0" max="60" value="25.00">
             </div>
             <div class="short-break-mode">
               <p class="settings-label">Short Break</p>
-              <input type="number" id="short-break" name="short-break" min="0" max="60" value="0.1">
+              <input type="number" id="short-break" name="short-break" min="0" max="60" value="5.00">
             </div>
             <div class="long-break-mode">
               <p class="settings-label">Long Break</p>
-              <input type="number" id="long-break" name="long-break" min="0" max="60" value="0.1">
+              <input type="number" id="long-break" name="long-break" min="0" max="60" value="15.00">
             </div>
           </div>
         </div>
@@ -60,7 +64,7 @@
           <div class="input-con">
             <div class="Interval">
               <p class="settings-label">Interval</p>
-              <input type="number" id="interval" name="interval" min="0" max="100" value="4">
+              <input type="number" id="interval" name="interval" min="0" max="100" value="5">
             </div>
           </div>
         </div>
@@ -72,29 +76,47 @@
     </div>
     <div class="main-head">
       <h1>Study Timer</h1> <!-- I need a better name...-->
-      <p>Pomodoro Style Timer for work, study and focus!</p>
+      <p>Pomodoro Style Timer for Work, Study and Focus!</p>
     </div>
     <div class="mode-bar">
       <button class="pomodoro-btn bar-btn active">Work</button>
       <button class="short-break-btn bar-btn">Short Break</button>
       <button class="long-break-btn bar-btn">Long Break</button>
     </div>
-    <p>Pomodoro cycles left:<br>
+    <p>Pomodoro Cycles Left:<br>
       <span class="cycles"></span> of 4
     </p>
+    <div class="task-list-container">
+      <button id="openTaskList">Task List</button>
+      <div id="taskList" class="hide">
+        <h2>Task List</h2>
+        <div class="totalTasks">Total tasks: <span id="totalTasks"></span></div>
+        <div class="completedTasks">Completed tasks: <span id="completedTasks"></span></div>
+        <input type="text" id="newTask" placeholder="Add a new task">
+        <button id="addTask">Add Task</button>
+        <ul id="taskItems"></ul>
+      </div>
+      <script src="script.js"></script>
+    </div>
     <div class="circle">
       <p class="time"></p>
       <div class="controls">
-        <button class="control-btn" id="play-btn">ICON
-          <!--Icon needed --><i class="fa-solid fa-play"></i>
+        <button class="control-btn" id="play-btn"><i class="fa-solid fa-play" style="color: 143, 162, 83;"></i></i>
         </button>
-        <button class="control-btn" id="stop-btn">ICON
-          <!--Icon needed --><i class="fa-solid fa-stop"></i>
+        <button class="control-btn" id="stop-btn">
+          <i class="fa-solid fa-stop"></i>
         </button>
       </div>
     </div>
+    <footer class="footer">
+      <div class="bottom-links">
+        <ul> <a href="https://docs.google.com/document/d/e/2PACX-1vRptAyIyJIGvxjZuqYDXRbRKpegTNV3EnGFwshNpdEgJtlZhSL9fF5-04iD0hKb44xr6kIzqEDJBVaJ/pub">Project Proposal </a></ul>
+        <ul><a href=""> About </a> </ul>
+        <ul> <a href="https://docs.google.com/document/d/e/2PACX-1vRwjqJ2TMEdbSOT9kA-4p-wK6c_lSisEOnACCEGaRCKgbF-hCGjyLtSkYFV89RqkFrvyOtW41-CTOE8/pub"> Design Document </a></ul>
+        <ul> <a href=""> Ux Report </a></ul>
+      </div>
+    </footer>
   </main>
-
 </body>
 
 </html>

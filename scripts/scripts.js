@@ -1,4 +1,3 @@
-/* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 // INFORMATION BUTTON//
 
 const infoBtns = document.querySelectorAll(".info-btn");
@@ -205,3 +204,65 @@ function longBreakTimer() {
 updateTime();
 updateTimer();
 activateBtn(modeBarBtns);
+
+//Task List//
+let taskList = document.getElementById("taskList");
+let newTask = document.getElementById("newTask");
+let taskItems = document.getElementById("taskItems");
+let totalTasks = document.getElementById("totalTasks");
+let completedTasks = document.getElementById("completedTasks");
+let tasks = [];
+
+let openTaskListButton = document.getElementById("openTaskList");
+openTaskListButton.addEventListener("click", function () {
+  taskList.classList.toggle("hide");
+});
+
+let addTaskButton = document.getElementById("addTask");
+addTaskButton.addEventListener("click", function () {
+  let task = newTask.value.trim();
+  if (task === "") {
+    return;
+  }
+  tasks.unshift({
+    name: task,
+    completed: false,
+    important: false
+  });
+  newTask.value = "";
+  renderTasks();
+});
+function renderTasks() {
+  taskItems.innerHTML = "";
+  tasks.forEach(function (task, index) {
+    let li = document.createElement("li");
+    li.innerText = task.name;
+    li.addEventListener("click", function () {
+      toggleComplete(index);
+    });
+    li.innerHTML += "<span class='delete'>x</span>";
+    let deleteButton = li.querySelector(".delete");
+    deleteButton.addEventListener("click", function () {
+      deleteTask(index);
+    });
+    if (task.important) {
+      li.classList.add("important");
+    }
+    if (task.completed) {
+      li.classList.add("completed");
+    }
+    taskItems.appendChild(li);
+  });
+  totalTasks.innerText = tasks.length;
+  completedTasks.innerText = tasks.filter((task) => task.completed).length;
+}
+
+function toggleComplete(index) {
+  tasks[index].completed = !tasks[index].completed;
+  renderTasks();
+}
+
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  renderTasks();
+}
