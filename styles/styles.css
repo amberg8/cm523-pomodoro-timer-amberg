@@ -20,7 +20,8 @@ button:hover {
 /* Info/Settings */
 .info-btn,
 .settings-btn,
-.control-btn {
+.control-btn
+{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +31,7 @@ button:hover {
   background-color: transparent;
   border: 1px solid #ca8f53;
 }
+
 .control-btn {
   margin-left: 40px;
 }
@@ -58,7 +60,7 @@ button:hover {
 
 #info-box p {
   color: #ca8f53;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #settings-box p {
@@ -191,13 +193,24 @@ main {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
-.bar-btn {
+.bar-btn,
+#openTaskList
+{
   background-color: transparent;
   border-radius: 20px;
   padding: 10px 20px;
   border: 1px solid #ca8f53;
 }
+#addTask{
+  background-color:rgba(224, 230, 178, 0.71);
+  border-radius: 20px;
+  padding: 5px 5px;
+  border: 1px solid #ca8f53;
+}
+#openTaskList {
+  margin-bottom: 20px;
+}
+
 .circle {
   border-radius: 50%;
   border: 5px solid #ca8f53;
@@ -240,7 +253,7 @@ main {
   color: #ca8f53;
 }
 
-}
+
 .footer {
   margin-top: 20px;
   border-top: 2px solid #8fa253;
@@ -253,17 +266,15 @@ ul {
   color: #e0e6b2;
 }
 /* Task List Business */
-
-.task-list-container{
-  padding-bottom: 30px;
-}
 .tasklist {
   padding-bottom: 30px;
-   font-size: 30px;
+   font-size: 24px;
 }
 .hide {
   display: none;
 }
+
+
 
 h1 {
   margin-top: 0;

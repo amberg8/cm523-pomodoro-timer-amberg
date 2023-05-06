@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Rufina:wght@400;700&display=swap");
+
+Body {
+  font-family: "Oxygen";
+  background-color: #fefae0;
+  color: #8fa253;
+  margin: 3rem;
+}
+h1 {
+  max-width: 650px;
+  font-family: Rufina;
+}
+p {
+  max-width: 750px;
+  margin-bottom: .5rem;
+}
+
+a:link { 
+text-decoration: none;
+}
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none;
+background-color: #ca8f53; }
+
+.return {
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+background-color: transparent;
+  border-radius: 20px;
+  color: #8fa253;
+  padding: 10px 20px;
+  border: 1px solid #ca8f53;
+}
+
+button:hover {
+  transform: scale(1.25);
+  text-color: #8fa253;
+  background-color: #e0e6b2;
+}
